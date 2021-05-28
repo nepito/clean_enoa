@@ -1,8 +1,10 @@
 import requests
 import json
 
+
 def add_offset(x: int, y: int) -> int:
     return x + y
+
 
 def output(content, index):
     per = content["Series"][0]["OBSERVATIONS"][index]["TIME_PERIOD"]
