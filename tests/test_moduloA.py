@@ -1,4 +1,5 @@
 import clean_enoa as ce
+import json
 
 
 def test_add_offset():
@@ -37,3 +38,23 @@ def test_desc_grupo(capsys):
         captured.out
         == "La población ocupada de grupo fue de 1, cifra menor en 0 con respecto al mismo trimestre del año anterior.\n"
     )
+
+
+class Requests:
+    def __init__(self):
+        self.status_code = 200
+        self.content = "respuesta"
+
+
+def test_get_content(mocker):
+    def get(url):
+        return Requests()
+
+    mocker.patch("requests.get", get)
+
+    def loads(respuesta):
+        return {"hola": 2}
+
+    mocker.patch("json.loads", loads)
+    contenido = ce.get_content("url")
+    assert contenido == {"hola": 2}
