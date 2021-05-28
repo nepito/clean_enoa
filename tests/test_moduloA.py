@@ -1,5 +1,4 @@
 import clean_enoa as ce
-import json
 
 
 def test_add_offset():
@@ -15,10 +14,10 @@ content = {
         {
             "OBSERVATIONS": [
                 {"TIME_PERIOD": 1, "OBS_VALUE": 1},
-                {"TIME_PERIOD": 2, "OBS_VALUE": 1},
-                {"TIME_PERIOD": 3, "OBS_VALUE": 1},
-                {"TIME_PERIOD": 4, "OBS_VALUE": 1},
-                {"TIME_PERIOD": 5, "OBS_VALUE": 1},
+                {"TIME_PERIOD": 2, "OBS_VALUE": 2},
+                {"TIME_PERIOD": 3, "OBS_VALUE": 3},
+                {"TIME_PERIOD": 4, "OBS_VALUE": 4},
+                {"TIME_PERIOD": 5, "OBS_VALUE": 5},
             ]
         }
     ]
@@ -28,7 +27,7 @@ content = {
 def test_output(capsys):  # or use "capfd" for fd-level
     ce.output(content, 1)
     captured = capsys.readouterr()
-    assert captured.out == "2 1\n"
+    assert captured.out == "2 2\n"
 
 
 def test_desc_grupo(capsys):
@@ -36,7 +35,7 @@ def test_desc_grupo(capsys):
     captured = capsys.readouterr()
     assert (
         captured.out
-        == "La población ocupada de grupo fue de 1, cifra menor en 0 con respecto al mismo trimestre del año anterior.\n"
+        == "La población ocupada de grupo fue de 1, cifra menor en -4 con respecto al mismo trimestre del año anterior.\n"
     )
 
 

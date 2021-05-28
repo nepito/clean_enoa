@@ -22,5 +22,5 @@ def get_content(url):
 def desc_grupo(content, grupo):
     ocupado_2021 = int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"])
     ocupado_2020 = int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"])
-    salida = f"La población ocupada de {grupo} fue de {ocupado_2021}, cifra menor en {abs(ocupado_2021 - ocupado_2020)} con respecto al mismo trimestre del año anterior."
+    salida = f"La población ocupada de {grupo} fue de {ocupado_2021}, cifra menor en {ocupado_2021 - ocupado_2020} con respecto al mismo trimestre del año anterior."
     print(salida)
