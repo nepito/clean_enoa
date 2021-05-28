@@ -45,7 +45,6 @@ coverage: install
 
 format:
 	black --line-length 100 ${module}
-	black --line-length 100 setup.py
 	black --line-length 100 tests
 
 install:
