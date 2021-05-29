@@ -9,6 +9,7 @@ all: check coverage mutants
 		install \
 		linter \
 		mutants \
+		results \
 		tests
 
 module = clean_enoa
@@ -56,6 +57,9 @@ linter:
 
 mutants:
 	mutmut run --paths-to-mutate ${module}
+
+results:
+	python src/ejemplo_api.py
 
 tests: install
 	pytest --verbose
