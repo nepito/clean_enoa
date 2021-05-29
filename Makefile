@@ -12,7 +12,7 @@ all: check coverage mutants
 		tests
 
 module = clean_enoa
-codecov_token = 6c56bccb-1758-4ed9-8161-97c845591c26
+codecov_token = a6d7163e-a1c7-4a7c-98bc-a3ce0ea094a8
 
 define lint
 	pylint \
