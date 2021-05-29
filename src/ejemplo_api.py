@@ -4,9 +4,6 @@ import clean_enoa as ce
 
 
 inegi_token = os.environ["INEGI_TOKEN"]
-indicador = 1002000002
-reciente = "false"
-# Llamado al API
 ocupada_hombres = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/446744/es/0700/false/BIE/2.0/{inegi_token}?type=json"
 ocupada_mujeres = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/446918/es/0700/false/BIE/2.0/{inegi_token}?type=json"
 
