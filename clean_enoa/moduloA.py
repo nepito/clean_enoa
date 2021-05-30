@@ -1,4 +1,5 @@
 import requests
+import os
 import json
 
 
@@ -26,5 +27,9 @@ def desc_grupo(content, grupo):
     print(salida)
 
 
+inegi_token = os.environ["INEGI_TOKEN"]
 def get_trimester_pea(trimester):
-    return 55385133
+    pea = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
+    content = get_content(pea)
+    trimester_pea = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
+    return trimester_pea
