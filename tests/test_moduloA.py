@@ -69,5 +69,8 @@ def tests_get_trimester_pea():
 
 def tests_get_trimester_employed_women():
     expected_employed_women = 20302109
-    obtained_employed_women = ce.get_trimester_employed_women()
+    obtained_employed_women = ce.get_trimester_employed_women(0)
+    assert expected_employed_women == obtained_employed_women 
+    expected_employed_women = 21868095
+    obtained_employed_women = ce.get_trimester_employed_women(4)
     assert expected_employed_women == obtained_employed_women 
