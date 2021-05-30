@@ -66,3 +66,8 @@ def tests_get_trimester_pea():
     expected_pea = 57328364
     trimester_year_ago_pea = ce.get_trimester_pea(4)
     assert expected_pea == trimester_year_ago_pea
+
+def tests_get_trimester_employed_women():
+    expected_employed_women = 20302109
+    obtained_employed_women = ce.get_trimester_employed_women()
+    assert expected_employed_women == obtained_employed_women 
