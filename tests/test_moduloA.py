@@ -61,5 +61,8 @@ def test_get_content(mocker):
 
 def tests_get_trimester_pea():
     expected_pea = 55385133
-    trimester_pea = ce.get_trimester_pea(0)
-    assert expected_pea == trimester_pea
+    last_trimester_pea = ce.get_trimester_pea(0)
+    assert expected_pea == last_trimester_pea
+    expected_pea = 57328364
+    trimester_year_ago_pea = ce.get_trimester_pea(4)
+    assert expected_pea == trimester_year_ago_pea
