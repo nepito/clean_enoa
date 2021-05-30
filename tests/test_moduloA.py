@@ -31,7 +31,7 @@ def test_output(capsys):  # or use "capfd" for fd-level
 
 
 def test_desc_grupo(capsys):
-    ce.desc_grupo(content, "grupo")
+    ce.desc_grupo(content, "ocupada de grupo")
     captured = capsys.readouterr()
     assert (
         captured.out

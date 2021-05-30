@@ -10,9 +10,9 @@ ocupada_mujeres = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores
 content = ce.get_content(ocupada_mujeres)
 ce.output(content, 0)
 ce.output(content, 4)
-ce.desc_grupo(content, "mujeres")
+ce.desc_grupo(content, "ocupada de mujeres")
 
 content = ce.get_content(ocupada_hombres)
 ce.output(content, 0)
 ce.output(content, 4)
-ce.desc_grupo(content, "hombres")
+ce.desc_grupo(content, "ocupada de hombres")
