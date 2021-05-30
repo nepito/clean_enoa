@@ -41,6 +41,7 @@ def get_trimester_employed_women(trimester):
     trimester_employed_women = get_trimester_indicator(url_employed_women, trimester)
     return trimester_employed_women
 
+
 def get_trimester_indicator(url, trimester):
     content = get_content(url)
     trimester_indicator = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
