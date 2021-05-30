@@ -33,3 +33,6 @@ def get_trimester_pea(trimester):
     content = get_content(pea)
     trimester_pea = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
     return trimester_pea
+
+def get_trimester_employed_women():
+    return 20302109
