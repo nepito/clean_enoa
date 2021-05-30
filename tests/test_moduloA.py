@@ -57,3 +57,9 @@ def test_get_content(mocker):
     mocker.patch("json.loads", loads)
     contenido = ce.get_content("url")
     assert contenido == {"hola": 2}
+
+
+def tests_get_last_trimester_pea():
+    expected_pea = 55385133
+    last_trimester_pea = get_last_trimester_pea()
+    assert expected_pea == last_trimester_pea
