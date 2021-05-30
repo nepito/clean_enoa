@@ -28,11 +28,14 @@ def desc_grupo(content, grupo):
 
 
 inegi_token = os.environ["INEGI_TOKEN"]
+
+
 def get_trimester_pea(trimester):
     pea = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
     content = get_content(pea)
     trimester_pea = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
     return trimester_pea
 
-def get_trimester_employed_women():
+
+def get_trimester_employed_women(trimester):
     return 20302109
