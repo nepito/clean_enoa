@@ -59,7 +59,7 @@ def test_get_content(mocker):
     assert contenido == {"hola": 2}
 
 
-def tests_get_last_trimester_pea():
+def tests_get_trimester_pea():
     expected_pea = 55385133
-    last_trimester_pea = get_last_trimester_pea()
-    assert expected_pea == last_trimester_pea
+    trimester_pea = ce.get_trimester_pea(0)
+    assert expected_pea == trimester_pea

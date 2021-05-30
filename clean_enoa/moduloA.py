@@ -24,3 +24,7 @@ def desc_grupo(content, grupo):
     ocupado_2020 = int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"])
     salida = f"La población {grupo} fue de {ocupado_2021}, cifra menor en {ocupado_2021 - ocupado_2020} con respecto al mismo trimestre del año anterior."
     print(salida)
+
+
+def get_trimester_pea(trimester):
+    return 55385133
