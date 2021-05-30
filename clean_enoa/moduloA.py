@@ -32,13 +32,16 @@ inegi_token = os.environ["INEGI_TOKEN"]
 
 def get_trimester_pea(trimester):
     pea = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
-    content = get_content(pea)
-    trimester_pea = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
+    trimester_pea = get_trimester_indicator(pea, trimester)
     return trimester_pea
 
 
 def get_trimester_employed_women(trimester):
     url_employed_women = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/446918/es/0700/false/BIE/2.0/{inegi_token}?type=json"
-    content = get_content(url_employed_women)
-    trimester_employed_women = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
+    trimester_employed_women = get_trimester_indicator(url_employed_women, trimester)
     return trimester_employed_women
+
+def get_trimester_indicator(url, trimester):
+    content = get_content(url)
+    trimester_indicator = int(content["Series"][0]["OBSERVATIONS"][trimester]["OBS_VALUE"])
+    return trimester_indicator
