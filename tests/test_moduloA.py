@@ -75,3 +75,9 @@ def tests_get_trimester_employed_women():
     expected_employed_women = 21868095
     obtained_employed_women = ce.get_trimester_employed_women(4)
     assert expected_employed_women == obtained_employed_women
+
+
+def tests_get_trimester_employed_men():
+    expected_employed_men = 32671161
+    obtained_employed_men = ce.get_trimester_employed_men(0)
+    assert expected_employed_men == obtained_employed_men
