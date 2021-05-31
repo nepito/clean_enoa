@@ -49,6 +49,8 @@ def get_trimester_employed_men(trimester):
     trimester_employed_men = get_trimester_indicator(url_employed_men, trimester)
     return trimester_employed_men
 
+
 def get_trimester_subemployed(trimester):
-    trimester_subemployed = 7320605
+    url_subemployed = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289278/es/0700/false/BIE/2.0/{inegi_token}?type=json"
+    trimester_subemployed = get_trimester_indicator(url_subemployed, trimester)
     return trimester_subemployed
