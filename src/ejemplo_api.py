@@ -31,6 +31,6 @@ last_trimester_unemployed_population = ce.get_trimester_pea(0) - ce.get_trimeste
 text_unemployed_population = f"La población desocupada fue {last_trimester_unemployed_population}."
 print(text_unemployed_population)
 
-last_trimester_subemployed_population = ce.get_trimester_subemployed(0)
-text_subemployed_population = f"La población subocupada fue {last_trimester_unemployed_population}."
-print(text_subemployed_population)
+last_trimester_underemployed_population = ce.get_trimester_underemployed(0)
+text_underemployed_population = f"La población subocupada fue {last_trimester_unemployed_population}."
+print(text_underemployed_population)

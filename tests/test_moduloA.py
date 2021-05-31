@@ -77,8 +77,8 @@ def assert_trimester_indicator(expected, get_function, trimester):
     assert expected == obtained
 
 
-def test_get_trimester_subemployed():
-    expected_subemployed = 7320605
-    assert_trimester_indicator(expected_subemployed, ce.get_trimester_subemployed, 0)
-    expected_subemployed = 4685631
-    assert_trimester_indicator(expected_subemployed, ce.get_trimester_subemployed, 4)
+def test_get_trimester_underemployed():
+    expected_underemployed = 7320605
+    assert_trimester_indicator(expected_underemployed, ce.get_trimester_underemployed, 0)
+    expected_underemployed = 4685631
+    assert_trimester_indicator(expected_underemployed, ce.get_trimester_underemployed, 4)
