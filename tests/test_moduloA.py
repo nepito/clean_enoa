@@ -75,3 +75,7 @@ def tests_get_trimester_employed_men():
 def assert_trimester_indicator(expected, get_function, trimester):
     obtained = get_function(trimester)
     assert expected == obtained
+
+def test_get_trimester_subemployed():
+    expected_subemployed = 7320605
+    assert_trimester_indicator(expected_subemployed, ce.get_trimester_subemployed, 0)
