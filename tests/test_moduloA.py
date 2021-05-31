@@ -61,23 +61,23 @@ def test_get_content(mocker):
 
 def tests_get_trimester_pea():
     expected_pea = 55385133
-    last_trimester_pea = ce.get_trimester_pea(0)
-    assert expected_pea == last_trimester_pea
+    assert_trimester_indicator(expected_pea, ce.get_trimester_pea, 0)
     expected_pea = 57328364
-    trimester_year_ago_pea = ce.get_trimester_pea(4)
-    assert expected_pea == trimester_year_ago_pea
+    assert_trimester_indicator(expected_pea, ce.get_trimester_pea, 4)
 
 
 def tests_get_trimester_employed_women():
     expected_employed_women = 20302109
-    obtained_employed_women = ce.get_trimester_employed_women(0)
-    assert expected_employed_women == obtained_employed_women
+    assert_trimester_indicator(expected_employed_women, ce.get_trimester_employed_women, 0)
     expected_employed_women = 21868095
-    obtained_employed_women = ce.get_trimester_employed_women(4)
-    assert expected_employed_women == obtained_employed_women
+    assert_trimester_indicator(expected_employed_women, ce.get_trimester_employed_women, 4)
 
 
 def tests_get_trimester_employed_men():
     expected_employed_men = 32671161
-    obtained_employed_men = ce.get_trimester_employed_men(0)
-    assert expected_employed_men == obtained_employed_men
+    assert_trimester_indicator(expected_employed_men, ce.get_trimester_employed_men, 0)
+
+
+def assert_trimester_indicator(expected, get_function, trimester):
+    obtained = get_function(trimester)
+    assert expected == obtained
