@@ -7,6 +7,6 @@ author = "Nepo Rojas • GECI"
 author-email = "nepo.rojas@islas.org.mx"
 classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",]
 description-file = "README.md"
-home-page = "https://github.com/nepito/clean-enoa.py"
+home-page = "https://github.com/nepito/clean-enoa"
 module = "clean_enoa"
 requires-python=">=3.9"
