@@ -76,6 +76,8 @@ def tests_get_trimester_employed_women():
 def tests_get_trimester_employed_men():
     expected_employed_men = 32671161
     assert_trimester_indicator(expected_employed_men, ce.get_trimester_employed_men, 0)
+    expected_employed_men = 33484209
+    assert_trimester_indicator(expected_employed_men, ce.get_trimester_employed_men, 4)
 
 
 def assert_trimester_indicator(expected, get_function, trimester):
