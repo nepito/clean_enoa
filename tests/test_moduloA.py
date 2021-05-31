@@ -1,14 +1,6 @@
 import clean_enoa as ce
 
 
-def test_add_offset():
-    a = 1
-    b = 2
-    expected = a + b
-    obtained = ce.add_offset(a, b)
-    assert expected == obtained
-
-
 content = {
     "Series": [
         {
