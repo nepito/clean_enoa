@@ -11,6 +11,8 @@ on:
 jobs:
   actions:
     runs-on: ubuntu-latest
+    env:
+      INEGI_TOKEN: ${{ secrets.INEGI_TOKEN }}
     steps:
     - name: Copia repositorio
       uses: actions/checkout@v2
