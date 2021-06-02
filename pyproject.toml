@@ -5,7 +5,12 @@ build-backend = "flit_core.buildapi"
 [tool.flit.metadata]
 author = "Nepo Rojas • GECI"
 author-email = "nepo.rojas@islas.org.mx"
-classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",]
+classifiers = [ 
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+]
 description-file = "README.md"
 home-page = "https://github.com/nepito/clean-enoa"
 module = "clean_enoa"
