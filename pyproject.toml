@@ -14,4 +14,7 @@ classifiers = [
 description-file = "README.md"
 home-page = "https://github.com/nepito/clean-enoa"
 module = "clean_enoa"
+requires = [
+    "requests",
+]
 requires-python=">=3"
