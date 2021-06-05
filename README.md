@@ -24,6 +24,25 @@ Install clean_enoa with pip
 ```bash
   pip install clean_enoa
 ```
+## Usage/Examples
+
+To get the employed men of the last trimester
+```python
+import clean_enoa as ce
+
+last_trimester_employed_population = ce.get_trimester_employed_men(0)
+```
+To calculate the unemployed population, we also need the economically active population and the
+employed women:
+```ptyhon
+last_trimester_unemployed_population = ce.get_trimester_pea(0) - ce.get_trimester_employed_men(0) - ce.get_trimester_employed_women(0)
+```
+
+## Used By
+
+This project is used by the following repository:
+
+- [Desempleo ENOA](https://github.com/davidmacer/desempleo-enoa)
 
 ## Feedback
 
