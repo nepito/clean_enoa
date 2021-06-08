@@ -2,9 +2,9 @@
 
 This package makes requests to INEGI about unemployment in Mexico
 
-[![codecov](https://codecov.io/gh/nepito/clean-enoa/branch/main/graph/badge.svg?token=DIoEtHqRMU)](https://codecov.io/gh/nepito/clean-enoa)
+[![codecov](https://codecov.io/gh/nepito/clean_enoa/branch/main/graph/badge.svg?token=DIoEtHqRMU)](https://codecov.io/gh/nepito/clean_enoa)
 ![example branch
-parameter](https://github.com/nepito/clean-enoa/actions/workflows/actions.yml/badge.svg)
+parameter](https://github.com/nepito/clean_enoa/actions/workflows/actions.yml/badge.svg)
 [![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
 
@@ -19,7 +19,7 @@ Get a token [here](http://www3.inegi.org.mx//sistemas/api/indicadores/v1/tokenVe
 
 ## Installation
 
-Install clean_enoa with pip
+Install Clean ENOA with pip
 
 ```bash
   pip install clean_enoa

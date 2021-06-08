@@ -33,15 +33,15 @@ check:
 	mypy tests
 
 clean:
+	rm --force --recursive ${module}.egg-info
+	rm --force --recursive ${module}/__pycache__
 	rm --force --recursive .*_cache
 	rm --force --recursive .tox
 	rm --force --recursive dist
-	rm --force --recursive ${module}.egg-info
-	rm --force --recursive ${module}/__pycache__
 	rm --force --recursive tests/__pycache__
 	rm --force .coverage
 	rm --force .mutmut-cache
-	rm --force coverage.xml
+	rm --force coverage.xm
 
 coverage: install
 	pytest --cov=${module} --cov-report=xml --verbose && \
