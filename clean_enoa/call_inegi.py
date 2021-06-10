@@ -30,7 +30,9 @@ inegi_token = os.environ["INEGI_TOKEN"]
 
 def get_quarterly_economically_active_population(trimester):
     url_economically_active_population = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
-    quarterly_economically_active_population = get_trimester_indicator(url_economically_active_population, trimester)
+    quarterly_economically_active_population = get_trimester_indicator(
+        url_economically_active_population, trimester
+    )
     return quarterly_economically_active_population
 
 
