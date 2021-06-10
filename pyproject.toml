@@ -16,6 +16,5 @@ home-page = "https://github.com/nepito/clean_enoa"
 module = "clean_enoa"
 requires = [
     "requests",
-    "types-requests",
 ]
 requires-python=">=3"

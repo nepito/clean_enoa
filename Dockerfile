@@ -12,4 +12,5 @@ RUN pip install \
     pytest \
     pytest-cov \
     pytest-mock \
+    types-requests \
     tox
