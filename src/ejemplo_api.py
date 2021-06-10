@@ -10,17 +10,17 @@ pea = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/IND
 content = ce.get_content(ocupada_mujeres)
 ce.output(content, 0)
 ce.output(content, 4)
-ce.desc_grupo(content, "ocupada de mujeres")
+ce.describe_group(content, "ocupada de mujeres")
 
 content = ce.get_content(ocupada_hombres)
 ce.output(content, 0)
 ce.output(content, 4)
-ce.desc_grupo(content, "ocupada de hombres")
+ce.describe_group(content, "ocupada de hombres")
 
 content = ce.get_content(pea)
 ce.output(content, 0)
 ce.output(content, 4)
-ce.desc_grupo(content, "económicamente activa")
+ce.describe_group(content, "económicamente activa")
 
 last_trimester_employed_population = (
     ce.get_trimester_employed_men(0) + ce.get_trimester_employed_women(0)

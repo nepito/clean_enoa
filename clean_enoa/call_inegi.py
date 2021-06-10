@@ -16,13 +16,13 @@ def get_content(url):
     return content
 
 
-def desc_grupo(content, grupo):
-    ocupado = {
-        2021: int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"]),
-        2020: int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"]),
+def describe_group(content, gruop):
+    indicator = {
+        "last_quarter": int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"]),
+        "a_year_ago": int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"]),
     }
-    salida = f"La población {grupo} fue de {ocupado[2021]}, cifra menor en {ocupado[2021] - ocupado[2020]} con respecto al mismo trimestre del año anterior."
-    print(salida)
+    output = f"La población {gruop} fue de {indicator['last_quarter']}, cifra menor en {indicator['last_quarter'] - indicator['a_year_ago']} con respecto al mismo trimestre del año anterior."
+    print(output)
 
 
 inegi_token = os.environ["INEGI_TOKEN"]

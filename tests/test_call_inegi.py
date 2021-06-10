@@ -22,8 +22,8 @@ def test_output(capsys):  # or use "capfd" for fd-level
     assert captured.out == "2 2\n"
 
 
-def test_desc_grupo(capsys):
-    ce.desc_grupo(content, "ocupada de grupo")
+def test_describe_group(capsys):
+    ce.describe_group(content, "ocupada de grupo")
     captured = capsys.readouterr()
     assert (
         captured.out
