@@ -35,7 +35,7 @@ last_trimester_employed_population = ce.get_trimester_employed_men(0)
 To calculate the unemployed population, we also need the economically active population and the
 employed women:
 ```ptyhon
-last_trimester_unemployed_population = ce.get_trimester_pea(0) - ce.get_trimester_employed_men(0) - ce.get_trimester_employed_women(0)
+last_trimester_unemployed_population = ce.get_quarterly_economically_active_population(0) - ce.get_trimester_employed_men(0) - ce.get_trimester_employed_women(0)
 ```
 
 ## Used By

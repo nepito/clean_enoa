@@ -51,11 +51,11 @@ def test_get_content(mocker):
     assert contenido == {"hola": 2}
 
 
-def tests_get_trimester_pea():
+def tests_quarterly_economically_active_population():
     expected_pea = 55385133
-    assert_trimester_indicator(expected_pea, ce.get_trimester_pea, 0)
+    assert_trimester_indicator(expected_pea, ce.get_quarterly_economically_active_population, 0)
     expected_pea = 57328364
-    assert_trimester_indicator(expected_pea, ce.get_trimester_pea, 4)
+    assert_trimester_indicator(expected_pea, ce.get_quarterly_economically_active_population, 4)
 
 
 def tests_get_trimester_employed_women():

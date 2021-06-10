@@ -17,19 +17,21 @@ def get_content(url):
 
 
 def desc_grupo(content, grupo):
-    ocupado_2021 = int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"])
-    ocupado_2020 = int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"])
-    salida = f"La población {grupo} fue de {ocupado_2021}, cifra menor en {ocupado_2021 - ocupado_2020} con respecto al mismo trimestre del año anterior."
+    ocupado = {
+        2021: int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"]),
+        2020: int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"]),
+    }
+    salida = f"La población {grupo} fue de {ocupado[2021]}, cifra menor en {ocupado[2021] - ocupado[2020]} con respecto al mismo trimestre del año anterior."
     print(salida)
 
 
 inegi_token = os.environ["INEGI_TOKEN"]
 
 
-def get_trimester_pea(trimester):
-    pea = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
-    trimester_pea = get_trimester_indicator(pea, trimester)
-    return trimester_pea
+def get_quarterly_economically_active_population(trimester):
+    url_economically_active_population = f"https://www.inegi.org.mx/app/api/indicadores/desarrolladores/jsonxml/INDICATOR/289244/es/0700/false/BIE/2.0/{inegi_token}?type=json"
+    quarterly_economically_active_population = get_trimester_indicator(url_economically_active_population, trimester)
+    return quarterly_economically_active_population
 
 
 def get_trimester_employed_women(trimester):
