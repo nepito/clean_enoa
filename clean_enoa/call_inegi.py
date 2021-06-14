@@ -3,27 +3,13 @@ import os
 import json
 
 
-def output(content, index):
-    per = content["Series"][0]["OBSERVATIONS"][index]["TIME_PERIOD"]
-    val = content["Series"][0]["OBSERVATIONS"][index]["OBS_VALUE"]
-    print(per, val)
-
-
 def get_content(url):
     response = requests.get(url)
-    ok_status = 200
-    if response.status_code == ok_status:
+    is_status_ok = response.status_code == 200
+    if is_status_ok:
         content = json.loads(response.content)
     return content
 
-
-def describe_group(content, gruop):
-    indicator = {
-        "last_quarter": int(content["Series"][0]["OBSERVATIONS"][0]["OBS_VALUE"]),
-        "a_year_ago": int(content["Series"][0]["OBSERVATIONS"][4]["OBS_VALUE"]),
-    }
-    output = f"La población {gruop} fue de {indicator['last_quarter']}, cifra menor en {indicator['last_quarter'] - indicator['a_year_ago']} con respecto al mismo trimestre del año anterior."
-    print(output)
 
 
 inegi_token = os.environ["INEGI_TOKEN"]

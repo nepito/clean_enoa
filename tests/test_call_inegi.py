@@ -16,21 +16,6 @@ content = {
 }
 
 
-def test_output(capsys):  # or use "capfd" for fd-level
-    ce.output(content, 1)
-    captured = capsys.readouterr()
-    assert captured.out == "2 2\n"
-
-
-def test_describe_group(capsys):
-    ce.describe_group(content, "ocupada de grupo")
-    captured = capsys.readouterr()
-    assert (
-        captured.out
-        == "La población ocupada de grupo fue de 1, cifra menor en -4 con respecto al mismo trimestre del año anterior.\n"
-    )
-
-
 class Requests:
     def __init__(self):
         ok_status = 200
