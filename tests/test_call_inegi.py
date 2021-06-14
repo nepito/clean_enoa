@@ -33,7 +33,8 @@ def test_describe_group(capsys):
 
 class Requests:
     def __init__(self):
-        self.status_code = 200
+        ok_status = 200
+        self.status_code = ok_status
         self.content = "respuesta"
 
 

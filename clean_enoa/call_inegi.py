@@ -11,7 +11,8 @@ def output(content, index):
 
 def get_content(url):
     response = requests.get(url)
-    if response.status_code == 200:
+    ok_status = 200
+    if response.status_code == ok_status:
         content = json.loads(response.content)
     return content
 
