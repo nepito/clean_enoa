@@ -1,22 +1,49 @@
-# Dummy Transformations
+# Clean ENOA
 
-Para usar este repo como _cookie cutters_ debemos hacer lo siguiente:
+This package makes requests to INEGI about unemployment in Mexico
 
-1. Clona este repo
-1. Borra la carpeta `.git`
-1. Cambia el nombre del repositorio
-1. Inicia un repositorio local
-1. Haz `push`
-1. Cambia `dummy_transformation` por el nombre del nuevo módulo en los archivos
-  - `Makefile`
-  - `pyproject`
-  - `tests\test_transformation.py`
-7. Cambia `dummy-transformation.py` del _home-page_ del archivo `pyproject.toml` por el del nuevo módulo
-1. Cambia el nombre del archivo `dummy_transformation\transformation.py` al nombre del primer
-   archivo del nuevo módulo
-1. Cambia la descripción del archivo `dummy_transformation\__init__.py`
-1. Cambia el nombre de la carpeta `dummy_transformation` al nombre del nuevo módulo
-1. Cambia el `codecov_token` del archivo `Makefile`
+[![codecov](https://codecov.io/gh/nepito/clean_enoa/branch/main/graph/badge.svg?token=DIoEtHqRMU)](https://codecov.io/gh/nepito/clean_enoa)
+![example branch
+parameter](https://github.com/nepito/clean_enoa/actions/workflows/actions.yml/badge.svg)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
-Los archivos del nuevo módulo los agregarás en la carpeta que antes se llamaba
-`dummy_transformations` y las pruebas en la carpeta `tests`.
+
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your `~/.profile`
+file
+
+`INEGI_TOKEN`
+
+Get a token [here](http://www3.inegi.org.mx//sistemas/api/indicadores/v1/tokenVerify.aspx).
+
+## Installation
+
+Install Clean ENOA with pip
+
+```bash
+  pip install clean_enoa
+```
+## Usage/Examples
+
+To get the employed men of the last trimester
+```python
+import clean_enoa as ce
+
+last_trimester_employed_population = ce.get_trimester_employed_men(0)
+```
+To calculate the unemployed population, we also need the economically active population and the
+employed women:
+```ptyhon
+last_trimester_unemployed_population = ce.get_quarterly_economically_active_population(0) - ce.get_trimester_employed_men(0) - ce.get_trimester_employed_women(0)
+```
+
+## Used By
+
+This project is used by the following repository:
+
+- [Desempleo ENOA](https://github.com/davidmacer/desempleo-enoa)
+
+## Feedback
+
+If you have any feedback, please reach out to us at nepo.rojas@islas.org.mx
