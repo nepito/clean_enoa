@@ -11,7 +11,6 @@ def get_content(url):
     return content
 
 
-
 inegi_token = os.environ["INEGI_TOKEN"]
 
 
